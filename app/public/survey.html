@@ -23,9 +23,7 @@
 
     <div id="survey-container">
 
-        <p class="instructions">We are so excited to help pair you with another cherub! Please fill out our quick survey
-            so we can find you the best fit. Unless stated otherwise, the answer choices represent a scale with "1"
-            being "No/Never/Rarely/Not Important/Not Strongly" and "5" being "Yes/Always/Often/Very Important/Very Strongly".
+        <p class="instructions">We are so excited to help pair you with another cherub! Please fill out our quick survey so we can find you the best fit. Unless stated otherwise, the answer choices represent a scale with "1" being "Never/Not Strongly" and "5" being "Always/Very Strongly".
         </p>
 
         <form>
@@ -74,9 +72,7 @@
 
 
             <div class="form-group">
-                <label for="survey-questions">2. How strongly do you feel about having a spouse who shares the same
-                    religious
-                    views as you?</label>
+                <label for="survey-questions">2. How strongly do you feel about having a spouse who shares the same religious views as you?</label>
 
                 <br>
 
@@ -106,8 +102,7 @@
 
 
             <div class="form-group">
-                <label for="survey-questions">3. When asked to pick a place to eat, how often do you give an actual
-                    answer?</label>
+                <label for="survey-questions">3. When asked to pick a place to eat, how often do you choose where to eat?</label>
 
                 <br>
 
@@ -137,7 +132,7 @@
 
 
             <div class="form-group">
-                <label for="survey-questions">4. Do you have strong music preferences?</label>
+                <label for="survey-questions">4. How strongly do you feel about what music is playing in the car?</label>
 
                 <br>
 
@@ -166,10 +161,7 @@
 
 
             <div class="form-group">
-                <label for="survey-questions">5. What temperature do you prefer sleeping in? ("1" being "Below 60
-                    degrees"
-                    and
-                    "5" being "No AC needed")</label>
+                <label for="survey-questions">5. How strongly do you feel that the optimal sleeping temperature lies below 70 degrees?</label>
 
                 <br>
 
@@ -228,7 +220,7 @@
 
 
             <div class="form-group">
-                <label for="survey-questions">7. How important are anniversaries?</label>
+                <label for="survey-questions">7. How strongly do you feel about the importance of anniversaries?</label>
 
                 <br>
 
@@ -286,9 +278,7 @@
 
 
             <div class="form-group">
-                <label for="survey-questions">9. Is it okay to leave the dishes in the sink overnight? ("1" being
-                    "Absolutely
-                    Not" and "5" being "Of Course"</label>
+                <label for="survey-questions">9. How strongly do you feel about having the dishes washed after every meal?</label>
 
                 <br>
 
@@ -375,7 +365,7 @@
 
 
             <div class="form-group">
-                <label for="survey-questions">12. How physically affectionate would you rate yourself?</label>
+                <label for="survey-questions">12. How strongly would you rate yourself as physically affectionate?</label>
 
                 <br>
 
@@ -404,7 +394,7 @@
 
 
             <div class="form-group">
-                <label for="survey-questions">13. Are you comfortable talking about sexual preferences?</label>
+                <label for="survey-questions">13. Are you comfortable discussing sexual preferences?</label>
 
                 <br>
 
@@ -439,6 +429,14 @@
         </form>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <button type="button" class="btn btn-info center-block" id="submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript/jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -450,12 +448,18 @@
             -moz-background-size: 100% 100%;
             -o-background-size: 100% 100%;
             background-size: cover;
+
         }
 
         #survey-container {
             margin: 10px auto !important;
             padding: 40px;
             padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        
+        #submit-btn{
+            margin: 10px auto;
         }
     </style>
 
