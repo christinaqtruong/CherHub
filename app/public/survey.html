@@ -452,6 +452,42 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <script type='text/JavaScript'>
+    // Submit user data
+$("#submit-btn").on("click", function(event) {
+    event.preventDefault();
+    var scores = [];
+    $("input:checked").each(function(i,e){
+        scores.push($(e).val());
+    })
+    var newCherub = {
+      "name": $("#username").val().trim(),
+      "picture": $("#profile-picture").val().trim(),
+      "scores": scores
+    }
+
+    // var cherubs = []
+    // cherubs.push(newCherub);
+
+    // for(var i=0; i < cherubs.length; i++){
+    //   for(var j=0; j < cherubs.scores.length; j++){
+    //     var scores = [];
+    //     scores.push(cherubs[0].scores[j])
+
+    //     var difference = function (a, b) { return Math.abs(a - b); }
+    //     difference(cherubs[0].scores[j], cherubs[i].scores[j]);
+    //   };
+    // }
+
+    // Question: What does this code do??
+    $.post("/api/cherubs", newCherub)
+      .then(function(data) {
+        console.log("add.html", data);
+      });
+  });
+
+    </script>
+
     <style>
         .jumbotron {
             background: url("https://minasespresso.com/wp-content/uploads/2019/02/Minas-Espresso-Inc.-First-Date-Meet-at-Your-Local-Coffee-Shop.jpg") no-repeat center center;

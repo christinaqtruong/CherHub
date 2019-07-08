@@ -1,5 +1,6 @@
 var path = require("path");
 
+module.exports = function(app) {
 // Submit user data
 $("#submit-btn").on("click", function(event) {
     event.preventDefault();
@@ -15,8 +16,8 @@ $("#submit-btn").on("click", function(event) {
       for(var i=0; i < newCherub.scores.length; i++){
         var scores = [];
         scores.push(newCherub.scores[i])
-        var totalDifference = newCherub.name[i]
-
+        var difference = function (a, b) { return Math.abs(a - b); }
+        difference(scores[i],)
       };
 
     // Question: What does this code do??
@@ -25,3 +26,4 @@ $("#submit-btn").on("click", function(event) {
         console.log("add.html", data);
       });
   });
+}
