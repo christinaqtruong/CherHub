@@ -1,3 +1,5 @@
+var path = require("path");
+
 // Submit user data
 $("#submit-btn").on("click", function(event) {
     event.preventDefault();

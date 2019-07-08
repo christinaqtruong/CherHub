@@ -3,6 +3,7 @@ module.exports = function(app) {
 // Users (DATA)
 // =============================================================
 var cherubs = [];
+var path = require("path");
 
 // Create New Characters - takes in JSON input
 app.post("/api/cherubs", function(req, res) {
