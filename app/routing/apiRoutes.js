@@ -7,35 +7,38 @@ var path = require("path");
 
 // Create New Characters - takes in JSON input
 app.post("/api/cherubs", function(req, res) {
-    // req.body hosts is equal to the JSON post sent from the user
-    // This works because of our body parsing middleware
+    // holds the data from the request, and sets default values for the score and index we are comparing the first user data to
     var newCherub = req.body;
     let bestFriend = {
       score: 1000000,
       index: 0
     };
-    // Using a RegEx Pattern to remove spaces from newCharacter
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    
+  //loops through all the data submitted and compares their scores, setting a default difference of zero
   for (let i = 0; i < cherubs.length; i++) {
     const element = cherubs[i];
     let diff = 0;
 
+      //calculates the differences between the newest user data and the previous ones using absolute values
       for (let j = 0; j < req.body.scores.length; j++) {
         diff = diff + Math.abs(parseInt(element.scores[j]) - parseInt(req.body.scores[j]))
         
       }
+
+      //if the difference is the lowest one, it grabs the user data with the lowest score
       console.log(diff,bestFriend.score);
       if(diff<bestFriend.score){
         diff = bestFriend.score
         bestFriend.index = i;
       }
   }
-
+    
+    //grabs the cherub with the lowest difference and sticks their data into the cherubs array
     cherubs.push(newCherub);
     res.json(cherubs[bestFriend.index]);
   });
 
-// Displays all characters
+// Displays information on the cherub with the lowest difference
 app.get("/api/cherubs", function(req, res) {
   return res.json(cherubs);
 });  
