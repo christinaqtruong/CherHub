@@ -60,7 +60,7 @@
         <img id="match-img" src="https://www.etonline.com/sites/default/files/styles/max_640x640/public/images/2019-05/gettyimages-1145337999.jpg?itok=oUdrKdUK&h=6b7011a3" alt="">
     </div>
     <div class="modal-footer">
-            <span class="close">&times;<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </span>
+            <span class="close"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </span>
     </div>
   </div>
 
@@ -522,15 +522,10 @@ $("#submit-btn").on("click", function(event) {
 
                     ]
                 };
+                console.log("form validated"
+                )
     
             }
-    //posts data grabbed 
-    $.post("/api/cherubs", newCherub, function(data){
-        $("match-name").text("Your cherub is " + data.name);
-        $("#match-img").attr("src", data.picture);
-        $("#results-modal".modal("toggle"))
-    });
-
 
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -552,6 +547,12 @@ $("#submit-btn").on("click", function(event) {
         modal.style.display = "none";
     }
     }
+
+    //posts data grabbed 
+    $.post("/api/cherubs", newCherub, function(data){
+        $("match-name").text("Your cherub is " + data.name);
+        $("#match-img").attr("src", data.picture);
+    });
 });
 
     </script>
