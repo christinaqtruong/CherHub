@@ -54,8 +54,13 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id="match">Modal</p>
+    <div class="modal-body">
+        <h2 id="match-name"></h2>
+        <img id="match-img" src="https://www.etonline.com/sites/default/files/styles/max_640x640/public/images/2019-05/gettyimages-1145337999.jpg?itok=oUdrKdUK&h=6b7011a3" alt="">
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
   </div>
 
 </div>
@@ -468,26 +473,62 @@ $("#submit-btn").on("click", function(event) {
     //prevents default submission function
     event.preventDefault();
 
-    //holds scores from survey
-    var scores = [];
+    // //holds scores from survey
+    // var scores = [];
 
-    //grabs all checked values and pushes it into the scores array
-    $("input:checked").each(function(i,e){
-        scores.push($(e).val());
-    })
+    // //grabs all checked values and pushes it into the scores array
+    // $("input:checked").each(function(i,e){
+    //     scores.push($(e).val());
+    // })
 
-    //object that holds new user data grabbed from survey page
-    var newCherub = {
-      "name": $("#username").val().trim(),
-      "picture": $("#profile-picture").val().trim(),
-      "scores": scores
+    // //object that holds new user data grabbed from survey page
+    // var newCherub = {
+    //   "name": $("#username").val().trim(),
+    //   "picture": $("#profile-picture").val().trim(),
+    //   "scores": scores
+    // }
+
+    // form validation
+    function validateForm() {
+        var isValid = true;
+        var completeForms = $(".inputs > input:checked").length;
+        if (completeForms < 13) {
+            isValid = false;
+        } else {
+            isValid = true;
+        }
+        return isValid;
     }
 
+            // if an answer is given for all questions
+            if (validateForm()) {
+                var newCherub = {
+                    name: $("#username").val().trim(),
+                    picture: $("#profile-picture").val().trim(),
+                    scores: [$("input[name='inlineRadios-1']:checked").val(),
+                            $("input[name='inlineRadios-2']:checked").val(),
+                            $("input[name='inlineRadios-3']:checked").val(),
+                            $("input[name='inlineRadios-4']:checked").val(),
+                            $("input[name='inlineRadios-5']:checked").val(),
+                            $("input[name='inlineRadios-6']:checked").val(),
+                            $("input[name='inlineRadios-7']:checked").val(),
+                            $("input[name='inlineRadios-8']:checked").val(),
+                            $("input[name='inlineRadios-9']:checked").val(),
+                            $("input[name='inlineRadios-10']:checked").val(),
+                            $("input[name='inlineRadios-11']:checked").val(),
+                            $("input[name='inlineRadios-12']:checked").val(),
+                            $("input[name='inlineRadios-13']:checked").val(),
+
+                    ]
+                };
+    
+            }
     //posts data grabbed 
-    $.post("/api/cherubs", newCherub)
-      .then(function(data) {
-        console.log("add.html", data);
-      });
+    $.post("/api/cherubs", newCherub, function(data){
+        $("match-name").text("Your cherub is " + data.name);
+        $("#match-img").attr("src", data.picture);
+        $("#results-modal".modal("toggle"))
+    });
 
 
     // Get the modal
@@ -498,9 +539,6 @@ $("#submit-btn").on("click", function(event) {
 
     // When the user clicks on the button, open the modal 
     modal.style.display = "block";
-
-    //displays cherub data in modal
-    $('#match').text("Meet " + + "!" )
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
@@ -513,7 +551,7 @@ $("#submit-btn").on("click", function(event) {
         modal.style.display = "none";
     }
     }
-  });
+});
 
     </script>
 
