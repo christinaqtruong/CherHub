@@ -10,32 +10,76 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .jumbotron {
+            background: url("https://minasespresso.com/wp-content/uploads/2019/02/Minas-Espresso-Inc.-First-Date-Meet-at-Your-Local-Coffee-Shop.jpg") no-repeat center center;
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            background-size: cover;
+            margin-bottom: 0px;
+        }
+
+        #survey-container {
+            margin: 10px auto !important;
+            padding: 40px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        #submit-btn {
+            margin: 10px auto;
+        }
+
+        .quiz {
+            margin: 20px;
+        }
+
+        .btn-info {
+            background-color: gray;
+            border-color: gray;
+        }
+
+        .question {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        img#match-img {
+            width: 100%;
+        }
+
+        h2#match-name {
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+
+    </style>
 
 </head>
 
 <body>
-<!-- The Modal -->
-<div id="results-modal" class="modal">
+    <!-- The Modal -->
+    <div id="results-modal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
+        <!-- Modal content -->
+        <div class="modal-content">
 
-        <div class="modal-body">
-            <h2 id="match-name"></h2>
-            <img id="match-img"
-                src="https://www.etonline.com/sites/default/files/styles/max_640x640/public/images/2019-05/gettyimages-1145337999.jpg?itok=oUdrKdUK&h=6b7011a3"
-                alt="">
+            <div class="modal-body">
+                <h2 id="match-name"></h2>
+                <img id="match-img" src="" alt="">
 
-            <p class="personalMessage"></p>
+                <p class="personalMessage"></p>
+            </div>
+
+            <div class="modal-footer">
+                <span class="close"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </span>
+            </div>
         </div>
 
-        <div class="modal-footer">
-            <span class="close"><button type="button" class="btn btn-default"
-                    data-dismiss="modal">Close</button> </span>
-        </div>
     </div>
-
-</div>
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -73,156 +117,209 @@
                     placeholder="Submit a link to your image here!">
             </div>
 
-        <div id="questionOne" class="question-block">
-            <div class="question-body">
-                
-                <p class="question">I am someone who wants to have kids in the future.</p>
-                <div id="question-1" class="inputs" role="group" aria-label="Question 1">  1
-                    <input type="radio" name="question-1" id="question-1a" class="radio" value="1">1<label class="label" for="question-1a"></label>
-                    <input type="radio" name="question-1" id="question-1b" class="radio" value="2">2<label class="label" for="question-1b"></label>
-                    <input type="radio" name="question-1" id="question-1c" class="radio" value="3" checked>3<label class="label" for="question-1c"></label>
-                    <input type="radio" name="question-1" id="question-1d" class="radio" value="4">4<label class="label" for="question-1d"></label>
-                    <input type="radio" name="question-1" id="question-1e" class="radio" value="5">5<label class="label" for="question-1e"></label>
+            <div id="questionOne" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">I am someone who wants to have kids in the future.</p>
+                    <div id="question-1" class="inputs" role="group" aria-label="Question 1"> 1
+                        <input type="radio" name="question-1" id="question-1a" class="radio" value="1">1<label
+                            class="label" for="question-1a"></label>
+                        <input type="radio" name="question-1" id="question-1b" class="radio" value="2">2<label
+                            class="label" for="question-1b"></label>
+                        <input type="radio" name="question-1" id="question-1c" class="radio" value="3" checked>3<label
+                            class="label" for="question-1c"></label>
+                        <input type="radio" name="question-1" id="question-1d" class="radio" value="4">4<label
+                            class="label" for="question-1d"></label>
+                        <input type="radio" name="question-1" id="question-1e" class="radio" value="5">5<label
+                            class="label" for="question-1e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        
-    
-        <div id="questionTwo" class="question-block">
-            <div class="question-body">
-                
-                <p class="question">I am a deeply religious or spiritual person.</p>
-                <div id="question-2" class="inputs" role="group" aria-label="Question 2">
-                    <input type="radio" name="question-2" id="question-2a" class="radio" value="1">1<label class="label" for="question-2a"></label>
-                    <input type="radio" name="question-2" id="question-2b" class="radio" value="2">2<label class="label" for="question-2b"></label>
-                    <input type="radio" name="question-2" id="question-2c" class="radio" value="3" checked>3<label class="label" for="question-2c"></label>
-                    <input type="radio" name="question-2" id="question-2d" class="radio" value="4">4<label class="label" for="question-2d"></label>
-                    <input type="radio" name="question-2" id="question-2e" class="radio" value="5">5<label class="label" for="question-2e"></label>
+
+
+
+            <div id="questionTwo" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">I am a deeply religious or spiritual person.</p>
+                    <div id="question-2" class="inputs" role="group" aria-label="Question 2">
+                        <input type="radio" name="question-2" id="question-2a" class="radio" value="1">1<label
+                            class="label" for="question-2a"></label>
+                        <input type="radio" name="question-2" id="question-2b" class="radio" value="2">2<label
+                            class="label" for="question-2b"></label>
+                        <input type="radio" name="question-2" id="question-2c" class="radio" value="3" checked>3<label
+                            class="label" for="question-2c"></label>
+                        <input type="radio" name="question-2" id="question-2d" class="radio" value="4">4<label
+                            class="label" for="question-2d"></label>
+                        <input type="radio" name="question-2" id="question-2e" class="radio" value="5">5<label
+                            class="label" for="question-2e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-    
-        <div id="questionThree" class="question-block">
-            <div class="question-body">
-                
-                <p class="question">I like the thermostat turned below seventy degrees Fahrenheit when I sleep at night.</p>
-                <div id="question-3" class="inputs" role="group" aria-label="Question 3">
-                    <input type="radio" name="question-3" id="question-3a" class="radio" value="1">1<label class="label" for="question-3a"></label>
-                    <input type="radio" name="question-3" id="question-3b" class="radio" value="2">2<label class="label" for="question-3b"></label>
-                    <input type="radio" name="question-3" id="question-3c" class="radio" value="3" checked>3<label class="label" for="question-3c"></label>
-                    <input type="radio" name="question-3" id="question-3d" class="radio" value="4">4<label class="label" for="question-3d"></label>
-                    <input type="radio" name="question-3" id="question-3e" class="radio" value="5">5<label class="label" for="question-3e"></label>
+
+
+            <div id="questionThree" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">I like the thermostat turned below seventy degrees Fahrenheit when I sleep at
+                        night.</p>
+                    <div id="question-3" class="inputs" role="group" aria-label="Question 3">
+                        <input type="radio" name="question-3" id="question-3a" class="radio" value="1">1<label
+                            class="label" for="question-3a"></label>
+                        <input type="radio" name="question-3" id="question-3b" class="radio" value="2">2<label
+                            class="label" for="question-3b"></label>
+                        <input type="radio" name="question-3" id="question-3c" class="radio" value="3" checked>3<label
+                            class="label" for="question-3c"></label>
+                        <input type="radio" name="question-3" id="question-3d" class="radio" value="4">4<label
+                            class="label" for="question-3d"></label>
+                        <input type="radio" name="question-3" id="question-3e" class="radio" value="5">5<label
+                            class="label" for="question-3e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-    
-        <div id="questionFour" class="question-block">
-            <div class="question-body">
-                
-                <p class="question">I love listening to music in the car.</p>
-                <div id="question-4" class="inputs" role="group" aria-label="Question 4">
-                    <input type="radio" name="question-4" id="question-4a" class="radio" value="1">1<label class="label" for="question-4a"></label>
-                    <input type="radio" name="question-4" id="question-4b" class="radio" value="2">2<label class="label" for="question-4b"></label>
-                    <input type="radio" name="question-4" id="question-4c" class="radio" value="3" checked>3<label class="label" for="question-4c"></label>
-                    <input type="radio" name="question-4" id="question-4d" class="radio" value="4">4<label class="label" for="question-4d"></label>
-                    <input type="radio" name="question-4" id="question-4e" class="radio" value="5">5<label class="label" for="question-4e"></label>
+
+
+            <div id="questionFour" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">I love listening to music in the car.</p>
+                    <div id="question-4" class="inputs" role="group" aria-label="Question 4">
+                        <input type="radio" name="question-4" id="question-4a" class="radio" value="1">1<label
+                            class="label" for="question-4a"></label>
+                        <input type="radio" name="question-4" id="question-4b" class="radio" value="2">2<label
+                            class="label" for="question-4b"></label>
+                        <input type="radio" name="question-4" id="question-4c" class="radio" value="3" checked>3<label
+                            class="label" for="question-4c"></label>
+                        <input type="radio" name="question-4" id="question-4d" class="radio" value="4">4<label
+                            class="label" for="question-4d"></label>
+                        <input type="radio" name="question-4" id="question-4e" class="radio" value="5">5<label
+                            class="label" for="question-4e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-    
-        <div id="questionFive" class="question-block">
-            <div class="question-body">
-                
-                <p class="question">I enjoy playing sports.</p>
-                <div id="question-5" class="inputs" role="group" aria-label="Question 5">
-                    <input type="radio" name="question-5" id="question-5a" class="radio" value="1">1<label class="label" for="question-5a"></label>
-                    <input type="radio" name="question-5" id="question-5b" class="radio" value="2">2<label class="label" for="question-5b"></label>
-                    <input type="radio" name="question-5" id="question-5c" class="radio" value="3" checked>3<label class="label" for="question-5c"></label>
-                    <input type="radio" name="question-5" id="question-5d" class="radio" value="4">4<label class="label" for="question-5d"></label>
-                    <input type="radio" name="question-5" id="question-5e" class="radio" value="5">5<label class="label" for="question-5e"></label>
+
+
+            <div id="questionFive" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">I enjoy playing sports.</p>
+                    <div id="question-5" class="inputs" role="group" aria-label="Question 5">
+                        <input type="radio" name="question-5" id="question-5a" class="radio" value="1">1<label
+                            class="label" for="question-5a"></label>
+                        <input type="radio" name="question-5" id="question-5b" class="radio" value="2">2<label
+                            class="label" for="question-5b"></label>
+                        <input type="radio" name="question-5" id="question-5c" class="radio" value="3" checked>3<label
+                            class="label" for="question-5c"></label>
+                        <input type="radio" name="question-5" id="question-5d" class="radio" value="4">4<label
+                            class="label" for="question-5d"></label>
+                        <input type="radio" name="question-5" id="question-5e" class="radio" value="5">5<label
+                            class="label" for="question-5e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-    
-        <div id="questionSix" class="question-block">
-            <div class="question-body">
-                
-                <p class="question">I like spending most of my free time with my spouse.</p>
-                <div id="question-6" class="inputs" role="group" aria-label="Question 6">
-                    <input type="radio" name="question-6" id="question-6a" class="radio" value="1">1<label class="label" for="question-6a"></label>
-                    <input type="radio" name="question-6" id="question-6b" class="radio" value="2">2<label class="label" for="question-6b"></label>
-                    <input type="radio" name="question-6" id="question-6c" class="radio" value="3" checked>3<label class="label" for="question-6c"></label>
-                    <input type="radio" name="question-6" id="question-6d" class="radio" value="4">4<label class="label" for="question-6d"></label>
-                    <input type="radio" name="question-6" id="question-6e" class="radio" value="5">5<label class="label" for="question-6e"></label>
+
+
+            <div id="questionSix" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">I like spending most of my free time with my spouse.</p>
+                    <div id="question-6" class="inputs" role="group" aria-label="Question 6">
+                        <input type="radio" name="question-6" id="question-6a" class="radio" value="1">1<label
+                            class="label" for="question-6a"></label>
+                        <input type="radio" name="question-6" id="question-6b" class="radio" value="2">2<label
+                            class="label" for="question-6b"></label>
+                        <input type="radio" name="question-6" id="question-6c" class="radio" value="3" checked>3<label
+                            class="label" for="question-6c"></label>
+                        <input type="radio" name="question-6" id="question-6d" class="radio" value="4">4<label
+                            class="label" for="question-6d"></label>
+                        <input type="radio" name="question-6" id="question-6e" class="radio" value="5">5<label
+                            class="label" for="question-6e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-        <div id="questionSeven" class="question-block">
-            <div class="question-body">
-                
-                <p class="question">I like keeping in touch throughout the day through text or phone calls.</p>
-                <div id="question-7" class="inputs" role="group" aria-label="Question 7">
-                    <input type="radio" name="question-7" id="question-7a" class="radio" value="1">1<label class="label" for="question-7a"></label>
-                    <input type="radio" name="question-7" id="question-7b" class="radio" value="2">2<label class="label" for="question-7b"></label>
-                    <input type="radio" name="question-7" id="question-7c" class="radio" value="3" checked>3<label class="label" for="question-7c"></label>
-                    <input type="radio" name="question-7" id="question-7d" class="radio" value="4">4<label class="label" for="question-7d"></label>
-                    <input type="radio" name="question-7" id="question-7e" class="radio" value="5">5<label class="label" for="question-7e"></label>
+
+            <div id="questionSeven" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">I like keeping in touch throughout the day through text or phone calls.</p>
+                    <div id="question-7" class="inputs" role="group" aria-label="Question 7">
+                        <input type="radio" name="question-7" id="question-7a" class="radio" value="1">1<label
+                            class="label" for="question-7a"></label>
+                        <input type="radio" name="question-7" id="question-7b" class="radio" value="2">2<label
+                            class="label" for="question-7b"></label>
+                        <input type="radio" name="question-7" id="question-7c" class="radio" value="3" checked>3<label
+                            class="label" for="question-7c"></label>
+                        <input type="radio" name="question-7" id="question-7d" class="radio" value="4">4<label
+                            class="label" for="question-7d"></label>
+                        <input type="radio" name="question-7" id="question-7e" class="radio" value="5">5<label
+                            class="label" for="question-7e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-        <div id="questionEight" class="question-block">
-            <div class="question-body">
-                
-                <p class="question">After an argument I need some space as opposed to talking about it right away.</p>
-                <div id="question-8" class="inputs" role="group" aria-label="Question 8">
-                    <input type="radio" name="question-8" id="question-8a" class="radio" value="1">1<label class="label" for="question-8a"></label>
-                    <input type="radio" name="question-8" id="question-8b" class="radio" value="2">2<label class="label" for="question-8b"></label>
-                    <input type="radio" name="question-8" id="question-8c" class="radio" value="3" checked>3<label class="label" for="question-8c"></label>
-                    <input type="radio" name="question-8" id="question-8d" class="radio" value="4">4<label class="label" for="question-8d"></label>
-                    <input type="radio" name="question-8" id="question-8e" class="radio" value="5">5<label class="label" for="question-8e"></label>
+
+            <div id="questionEight" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">After an argument I need some space as opposed to talking about it right away.
+                    </p>
+                    <div id="question-8" class="inputs" role="group" aria-label="Question 8">
+                        <input type="radio" name="question-8" id="question-8a" class="radio" value="1">1<label
+                            class="label" for="question-8a"></label>
+                        <input type="radio" name="question-8" id="question-8b" class="radio" value="2">2<label
+                            class="label" for="question-8b"></label>
+                        <input type="radio" name="question-8" id="question-8c" class="radio" value="3" checked>3<label
+                            class="label" for="question-8c"></label>
+                        <input type="radio" name="question-8" id="question-8d" class="radio" value="4">4<label
+                            class="label" for="question-8d"></label>
+                        <input type="radio" name="question-8" id="question-8e" class="radio" value="5">5<label
+                            class="label" for="question-8e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-        <div id="questionNine" class="question-block">
-            <div class="question-body">
-                    
-                <p class="question">I am a social person.</p>
-                <div id="question-9" class="inputs" role="group" aria-label="Question 9">
-                    <input type="radio" name="question-9" id="question-9a" class="radio" value="1">1<label class="label" for="question-9a"></label>
-                    <input type="radio" name="question-9" id="question-9b" class="radio" value="2">2<label class="label" for="question-9b"></label>
-                    <input type="radio" name="question-9" id="question-9c" class="radio" value="3" checked>3<label class="label" for="question-9c"></label>
-                    <input type="radio" name="question-9" id="question-9d" class="radio" value="4">4<label class="label" for="question-9d"></label>
-                    <input type="radio" name="question-9" id="question-9e" class="radio" value="5">5<label class="label" for="question-9e"></label>
+
+            <div id="questionNine" class="question-block">
+                <div class="question-body">
+
+                    <p class="question">I am a social person.</p>
+                    <div id="question-9" class="inputs" role="group" aria-label="Question 9">
+                        <input type="radio" name="question-9" id="question-9a" class="radio" value="1">1<label
+                            class="label" for="question-9a"></label>
+                        <input type="radio" name="question-9" id="question-9b" class="radio" value="2">2<label
+                            class="label" for="question-9b"></label>
+                        <input type="radio" name="question-9" id="question-9c" class="radio" value="3" checked>3<label
+                            class="label" for="question-9c"></label>
+                        <input type="radio" name="question-9" id="question-9d" class="radio" value="4">4<label
+                            class="label" for="question-9d"></label>
+                        <input type="radio" name="question-9" id="question-9e" class="radio" value="5">5<label
+                            class="label" for="question-9e"></label>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-        <div id="questionTen" class="question-block">
-            <div class="question-body">
-                <p class="question">I'm comfortable talking about sex.</p>
-                <div id="question-10" class="inputs" role="group" aria-label="Question 10">
-                    <input type="radio" name="question-10" id="question-10a" class="radio" value="1">  1<label class="label" for="question-10a"></label>
-                    <input type="radio" name="question-10" id="question-10b" class="radio" value="2">2<label class="label" for="question-10b"></label>
-                    <input type="radio" name="question-10" id="question-10c" class="radio" value="3" checked>3<label class="label" for="question-10c"></label>
-                    <input type="radio" name="question-10" id="question-10d" class="radio" value="4">4<label class="label" for="question-10d"></label>
-                    <input type="radio" name="question-10" id="question-10e" class="radio" value="5">5<label class="label" for="question-10e"></label>
+
+            <div id="questionTen" class="question-block">
+                <div class="question-body">
+                    <p class="question">I'm comfortable talking about sex.</p>
+                    <div id="question-10" class="inputs" role="group" aria-label="Question 10">
+                        <input type="radio" name="question-10" id="question-10a" class="radio" value="1"> 1<label
+                            class="label" for="question-10a"></label>
+                        <input type="radio" name="question-10" id="question-10b" class="radio" value="2">2<label
+                            class="label" for="question-10b"></label>
+                        <input type="radio" name="question-10" id="question-10c" class="radio" value="3" checked>3<label
+                            class="label" for="question-10c"></label>
+                        <input type="radio" name="question-10" id="question-10d" class="radio" value="4">4<label
+                            class="label" for="question-10d"></label>
+                        <input type="radio" name="question-10" id="question-10e" class="radio" value="5">5<label
+                            class="label" for="question-10e"></label>
+                    </div>
+
                 </div>
-    
             </div>
-        </div>
-<br>
+            <br>
 
             <div class="form-group">
                 <label for="message">Personal Message for your Cherub</label>
-                <textarea class="form-control" id="message" rows="3" placeholder="Type a personal message for your cherub here!"></textarea>
+                <textarea class="form-control" id="message" rows="3"
+                    placeholder="Type a personal message for your cherub here!"></textarea>
             </div>
         </form>
     </div>
@@ -247,183 +344,56 @@ $("#submit-btn").on("click", function(event) {
 
     // form validation
     function validateForm() {
-                var isValid = true;
-                var completeForms = $(".inputs > input:checked").length;
-                if (completeForms < 10) {
-                    isValid = false;
-                } else {
-                    isValid = true;
-                }
-                return isValid;
-            }
+        var isValid = true;
+        var completeForms = $(".inputs > input:checked").length;
+        var completeUsername = $("#username").value;
+        var completePhoto = $("#profile-picture").value;
+
+        if ((completeForms < 10)||(completeUsername == "")||(completePhoto == "")) {
+            isValid = false;
+        } else {
+            isValid = true;
+        }
+        return isValid;
+    }
 
 
-            // if an answer is given for all questions
-            if (validateForm()) {
-                var newCherub = {
-                    name: $("#username").val().trim(),
-                    photo: $("#profile-picture").val().trim(),
-                    scores: [$("input[name='question-1']:checked").val(),
-                            $("input[name='question-2']:checked").val(),
-                            $("input[name='question-3']:checked").val(),
-                            $("input[name='question-4']:checked").val(),
-                            $("input[name='question-5']:checked").val(),
-                            $("input[name='question-6']:checked").val(),
-                            $("input[name='question-7']:checked").val(),
-                            $("input[name='question-8']:checked").val(),
-                            $("input[name='question-9']:checked").val(),
-                            $("input[name='question-10']:checked").val()
-                    ]
-                };
+    // if an answer is given for all questions
+    if (validateForm()) {
+        var newCherub = {
+            name: $("#username").val().trim(),
+            photo: $("#profile-picture").val().trim(),
+            scores: [$("input[name='question-1']:checked").val(),
+                    $("input[name='question-2']:checked").val(),
+                    $("input[name='question-3']:checked").val(),
+                    $("input[name='question-4']:checked").val(),
+                    $("input[name='question-5']:checked").val(),
+                    $("input[name='question-6']:checked").val(),
+                    $("input[name='question-7']:checked").val(),
+                    $("input[name='question-8']:checked").val(),
+                    $("input[name='question-9']:checked").val(),
+                    $("input[name='question-10']:checked").val()
+            ]
+        };
+
     
-            
-                //posts data grabbed 
-                $.post("/api/cherubs", newCherub, function(data){
-                    $("match-name").text("Your cherub is " + data.name);
-                    $("#match-img").attr("src", data.picture);
-                    $("personalMessage").text(data.message);
+        //posts data grabbed 
+        $.post("/api/cherubs", newCherub, function(data){
+            $("#match-name").text("Your cherub is " + data.name);
+            $("#match-img").attr("src", data.picture);
+            $(".personalMessage").text(data.message);
 
-                    console.log("Data posted and modal popped.")
+            console.log("Data posted and modal popped.")
 
-                    $("#results-modal").modal("toggle");
-                });
-            }
-            else {
-                alert("Please fill out all fields before submitting!");
-            }
-
-    // Get the modal
-    var modal = document.getElementById("results-modal");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0]; 
-
-    // // When the user clicks on the button, open the modal 
-    // modal.style.display = "block";
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-    modal.style.display = "none";
+            $("#results-modal").modal("show");
+        });
     }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+    else {
+        alert("Please fill out all fields before submitting!");
     }
 });
 
     </script>
-
-    <style>
-        .jumbotron {
-            background: url("https://minasespresso.com/wp-content/uploads/2019/02/Minas-Espresso-Inc.-First-Date-Meet-at-Your-Local-Coffee-Shop.jpg") no-repeat center center;
-            -webkit-background-size: 100% 100%;
-            -moz-background-size: 100% 100%;
-            -o-background-size: 100% 100%;
-            background-size: cover;
-            margin-bottom: 0px;
-        }
-
-        #survey-container {
-            margin: 10px auto !important;
-            padding: 40px;
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
-
-        #submit-btn {
-            margin: 10px auto;
-        }
-
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-
-        /* Modal Content/Box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            /* Could be more or less, depending on screen size */
-        }
-
-        /* The Close Button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .quiz {
-            margin: 20px;
-        }
-
-        .btn-info {
-            background-color: gray;
-            border-color: gray;
-        }
-
-        .question{
-            margin-top: 10px;
-            margin-bottom: 0;
-        }
-
-        .modal-title {
-    margin-bottom: 0;
-    line-height: 1.5;
-    /* text-align: left; */
-    font-size: 1.25rem;
-}
-
-img#match-img {
-    width: 100%;
-}
-
-h2#match-name {
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.5rem;
-}
-
-.modal-body {
-    padding: 0 1rem;
-}
-
-.modal-header, .modal-footer {
-    border: 0;
-}
-    </style>
 </body>
 
 </html>
