@@ -21,17 +21,19 @@
         </div>
     </div>
 
-    <p class="introduction">Welcome to your love story.</p>
-    <p class="description">Meet your cherub today! Start by taking a survey to find your best fit!</p>
+    <div class="home">
+        <p class="introduction">Welcome to your love story.</p>
+        <p class="description">Meet your cherub today! Start by taking a survey to find your best fit!</p>
 
-    <br>
+        <br>
 
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <a href="./survey">
-                    <button type="button" class="btn btn-info center-block" id="survey-btn">Take Survey</button>
-                </a>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <a href="./survey">
+                        <button type="button" class="btn btn-info center-block" id="survey-btn">Take Survey</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -47,6 +49,7 @@
             -moz-background-size: 100% 100%;
             -o-background-size: 100% 100%;
             background-size: cover;
+            margin-bottom: 0px;
         }
 
         .introduction {
@@ -58,6 +61,15 @@
         .description {
             text-align: center;
             margin: 10px auto !important;
+        }
+
+        .btn-info {
+            background-color: gray;
+            border-color: gray;
+        }
+
+        .home {
+            margin: 20px;
         }
     </style>
 

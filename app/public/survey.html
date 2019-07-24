@@ -14,6 +14,28 @@
 </head>
 
 <body>
+<!-- The Modal -->
+<div id="results-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+        <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id="match-img"
+                src="https://www.etonline.com/sites/default/files/styles/max_640x640/public/images/2019-05/gettyimages-1145337999.jpg?itok=oUdrKdUK&h=6b7011a3"
+                alt="">
+
+            <p class="personalMessage"></p>
+        </div>
+
+        <div class="modal-footer">
+            <span class="close"><button type="button" class="btn btn-default"
+                    data-dismiss="modal">Close</button> </span>
+        </div>
+    </div>
+
+</div>
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -22,21 +44,23 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-              </div>
             </div>
-          </nav>
+        </div>
+    </nav>
 
     <div id="survey-container">
 
-        <p class="instructions">We are so excited to help pair you with another cherub! Please rate the following statements on a scale of 1-5, with "1" being "Not Important at All" and "5" being "Very Important" based on how well they describe you.
+        <p class="instructions">We are so excited to help pair you with another cherub! Please rate the following
+            statements on a scale of 1-5 based on how accurate the statements are, with "1" being "Not accurate at All"
+            and "5" being "Very Accurate".
         </p>
-
         <form>
             <div class="form-group">
                 <label for="cherub-user">First Name</label>
@@ -49,409 +73,156 @@
                     placeholder="Submit a link to your image here!">
             </div>
 
-<!-- The Modal --></div>
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-       
-    <div class="modal-body">
-        <h2 id="match-name"></h2>
-        <img id="match-img" src="https://www.etonline.com/sites/default/files/styles/max_640x640/public/images/2019-05/gettyimages-1145337999.jpg?itok=oUdrKdUK&h=6b7011a3" alt="">
-    </div>
-    <div class="modal-footer">
-            <span class="close"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </span>
-    </div>
-  </div>
-
-</div>
-
-            <!-- survey questions -->
-
-            <div class="form-group">
-                <label for="survey-questions">1. I am someone who wants to have kids in the future.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio1">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio1">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios" id="inlineRadio4" value="4">
-                    <label class="form-check-label" for="inlineRadio1">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios" id="inlineRadio5" value="5">
-                    <label class="form-check-label" for="inlineRadio1">5</label>
+        <div id="questionOne" class="question-block">
+            <div class="question-body">
+                
+                <p class="question">I am someone who wants to have kids in the future.</p>
+                <div id="question-1" class="inputs" role="group" aria-label="Question 1">  1
+                    <input type="radio" name="question-1" id="question-1a" class="radio" value="1">1<label class="label" for="question-1a"></label>
+                    <input type="radio" name="question-1" id="question-1b" class="radio" value="2">2<label class="label" for="question-1b"></label>
+                    <input type="radio" name="question-1" id="question-1c" class="radio" value="3" checked>3<label class="label" for="question-1c"></label>
+                    <input type="radio" name="question-1" id="question-1d" class="radio" value="4">4<label class="label" for="question-1d"></label>
+                    <input type="radio" name="question-1" id="question-1e" class="radio" value="5">5<label class="label" for="question-1e"></label>
                 </div>
             </div>
-
-
-
-            <div class="form-group">
-                <label for="survey-questions">2. I am a deeply religious or spiritual person.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios2" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios2" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios2" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios2" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios2" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+        </div>
+        
+        
+    
+        <div id="questionTwo" class="question-block">
+            <div class="question-body">
+                
+                <p class="question">I am a deeply religious or spiritual person.</p>
+                <div id="question-2" class="inputs" role="group" aria-label="Question 2">
+                    <input type="radio" name="question-2" id="question-2a" class="radio" value="1">1<label class="label" for="question-2a"></label>
+                    <input type="radio" name="question-2" id="question-2b" class="radio" value="2">2<label class="label" for="question-2b"></label>
+                    <input type="radio" name="question-2" id="question-2c" class="radio" value="3" checked>3<label class="label" for="question-2c"></label>
+                    <input type="radio" name="question-2" id="question-2d" class="radio" value="4">4<label class="label" for="question-2d"></label>
+                    <input type="radio" name="question-2" id="question-2e" class="radio" value="5">5<label class="label" for="question-2e"></label>
                 </div>
             </div>
-
-
-
-            <div class="form-group">
-                <label for="survey-questions">3. I like the thermostat turned low when I sleep at night.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios3" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios3" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios3" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios3" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios3" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+        </div>
+    
+    
+        <div id="questionThree" class="question-block">
+            <div class="question-body">
+                
+                <p class="question">I like the thermostat turned below seventy degrees Fahrenheit when I sleep at night.</p>
+                <div id="question-3" class="inputs" role="group" aria-label="Question 3">
+                    <input type="radio" name="question-3" id="question-3a" class="radio" value="1">1<label class="label" for="question-3a"></label>
+                    <input type="radio" name="question-3" id="question-3b" class="radio" value="2">2<label class="label" for="question-3b"></label>
+                    <input type="radio" name="question-3" id="question-3c" class="radio" value="3" checked>3<label class="label" for="question-3c"></label>
+                    <input type="radio" name="question-3" id="question-3d" class="radio" value="4">4<label class="label" for="question-3d"></label>
+                    <input type="radio" name="question-3" id="question-3e" class="radio" value="5">5<label class="label" for="question-3e"></label>
                 </div>
             </div>
-
-
-
-            <div class="form-group">
-                <label for="survey-questions">4. I love listening to music in the car.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios4" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios4" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios4" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios4" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios4" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+        </div>
+    
+    
+        <div id="questionFour" class="question-block">
+            <div class="question-body">
+                
+                <p class="question">I love listening to music in the car.</p>
+                <div id="question-4" class="inputs" role="group" aria-label="Question 4">
+                    <input type="radio" name="question-4" id="question-4a" class="radio" value="1">1<label class="label" for="question-4a"></label>
+                    <input type="radio" name="question-4" id="question-4b" class="radio" value="2">2<label class="label" for="question-4b"></label>
+                    <input type="radio" name="question-4" id="question-4c" class="radio" value="3" checked>3<label class="label" for="question-4c"></label>
+                    <input type="radio" name="question-4" id="question-4d" class="radio" value="4">4<label class="label" for="question-4d"></label>
+                    <input type="radio" name="question-4" id="question-4e" class="radio" value="5">5<label class="label" for="question-4e"></label>
                 </div>
             </div>
-
-
-            <div class="form-group">
-                <label for="survey-questions">5. I enjoy playing sports.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios5" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios5" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios5" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios5" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios5" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+        </div>
+    
+    
+        <div id="questionFive" class="question-block">
+            <div class="question-body">
+                
+                <p class="question">I enjoy playing sports.</p>
+                <div id="question-5" class="inputs" role="group" aria-label="Question 5">
+                    <input type="radio" name="question-5" id="question-5a" class="radio" value="1">1<label class="label" for="question-5a"></label>
+                    <input type="radio" name="question-5" id="question-5b" class="radio" value="2">2<label class="label" for="question-5b"></label>
+                    <input type="radio" name="question-5" id="question-5c" class="radio" value="3" checked>3<label class="label" for="question-5c"></label>
+                    <input type="radio" name="question-5" id="question-5d" class="radio" value="4">4<label class="label" for="question-5d"></label>
+                    <input type="radio" name="question-5" id="question-5e" class="radio" value="5">5<label class="label" for="question-5e"></label>
                 </div>
             </div>
-
-
-            <div class="form-group">
-                <label for="survey-questions">6. $20.00 isn't too much to spend on a date.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios6" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios6" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios6" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios6" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios6" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+        </div>
+    
+    
+        <div id="questionSix" class="question-block">
+            <div class="question-body">
+                
+                <p class="question">I like spending most of my free time with my spouse.</p>
+                <div id="question-6" class="inputs" role="group" aria-label="Question 6">
+                    <input type="radio" name="question-6" id="question-6a" class="radio" value="1">1<label class="label" for="question-6a"></label>
+                    <input type="radio" name="question-6" id="question-6b" class="radio" value="2">2<label class="label" for="question-6b"></label>
+                    <input type="radio" name="question-6" id="question-6c" class="radio" value="3" checked>3<label class="label" for="question-6c"></label>
+                    <input type="radio" name="question-6" id="question-6d" class="radio" value="4">4<label class="label" for="question-6d"></label>
+                    <input type="radio" name="question-6" id="question-6e" class="radio" value="5">5<label class="label" for="question-6e"></label>
                 </div>
             </div>
-
-
-
-            <div class="form-group">
-                <label for="survey-questions">7. I like to do something special for anniversaries.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios7" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios7" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios7" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios7" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios7" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+        </div>
+    
+        <div id="questionSeven" class="question-block">
+            <div class="question-body">
+                
+                <p class="question">I like keeping in touch throughout the day through text or phone calls.</p>
+                <div id="question-7" class="inputs" role="group" aria-label="Question 7">
+                    <input type="radio" name="question-7" id="question-7a" class="radio" value="1">1<label class="label" for="question-7a"></label>
+                    <input type="radio" name="question-7" id="question-7b" class="radio" value="2">2<label class="label" for="question-7b"></label>
+                    <input type="radio" name="question-7" id="question-7c" class="radio" value="3" checked>3<label class="label" for="question-7c"></label>
+                    <input type="radio" name="question-7" id="question-7d" class="radio" value="4">4<label class="label" for="question-7d"></label>
+                    <input type="radio" name="question-7" id="question-7e" class="radio" value="5">5<label class="label" for="question-7e"></label>
                 </div>
             </div>
-
-
-            <div class="form-group">
-                <label for="survey-questions">8. I cook at home more often than I eat out during a week.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios8" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios8" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios8" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios8" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios8" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+        </div>
+    
+        <div id="questionEight" class="question-block">
+            <div class="question-body">
+                
+                <p class="question">After an argument I need some space as opposed to talking about it right away.</p>
+                <div id="question-8" class="inputs" role="group" aria-label="Question 8">
+                    <input type="radio" name="question-8" id="question-8a" class="radio" value="1">1<label class="label" for="question-8a"></label>
+                    <input type="radio" name="question-8" id="question-8b" class="radio" value="2">2<label class="label" for="question-8b"></label>
+                    <input type="radio" name="question-8" id="question-8c" class="radio" value="3" checked>3<label class="label" for="question-8c"></label>
+                    <input type="radio" name="question-8" id="question-8d" class="radio" value="4">4<label class="label" for="question-8d"></label>
+                    <input type="radio" name="question-8" id="question-8e" class="radio" value="5">5<label class="label" for="question-8e"></label>
                 </div>
             </div>
-
-
-            <div class="form-group">
-                <label for="survey-questions">9. The dishes must be washed and the sink must be empty by the end of each day.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios9" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios9" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios9" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios9" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios9" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
+        </div>
+    
+        <div id="questionNine" class="question-block">
+            <div class="question-body">
+                    
+                <p class="question">I am a social person.</p>
+                <div id="question-9" class="inputs" role="group" aria-label="Question 9">
+                    <input type="radio" name="question-9" id="question-9a" class="radio" value="1">1<label class="label" for="question-9a"></label>
+                    <input type="radio" name="question-9" id="question-9b" class="radio" value="2">2<label class="label" for="question-9b"></label>
+                    <input type="radio" name="question-9" id="question-9c" class="radio" value="3" checked>3<label class="label" for="question-9c"></label>
+                    <input type="radio" name="question-9" id="question-9d" class="radio" value="4">4<label class="label" for="question-9d"></label>
+                    <input type="radio" name="question-9" id="question-9e" class="radio" value="5">5<label class="label" for="question-9e"></label>
                 </div>
             </div>
-
-
-            <div class="form-group">
-                <label for="survey-questions">10. The only car wash I use is mother nature.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios10" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
+        </div>
+    
+        <div id="questionTen" class="question-block">
+            <div class="question-body">
+                <p class="question">I'm comfortable talking about sex.</p>
+                <div id="question-10" class="inputs" role="group" aria-label="Question 10">
+                    <input type="radio" name="question-10" id="question-10a" class="radio" value="1">  1<label class="label" for="question-10a"></label>
+                    <input type="radio" name="question-10" id="question-10b" class="radio" value="2">2<label class="label" for="question-10b"></label>
+                    <input type="radio" name="question-10" id="question-10c" class="radio" value="3" checked>3<label class="label" for="question-10c"></label>
+                    <input type="radio" name="question-10" id="question-10d" class="radio" value="4">4<label class="label" for="question-10d"></label>
+                    <input type="radio" name="question-10" id="question-10e" class="radio" value="5">5<label class="label" for="question-10e"></label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios10" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios10" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios10" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios10" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
-                </div>
+    
             </div>
-
-
-            <div class="form-group">
-                <label for="survey-questions">11. I like it when my spouse surprises me with a present.</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios11" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios11" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios11" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios11" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios11" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
-                </div>
-            </div>
-
+        </div>
+<br>
 
             <div class="form-group">
-                <label for="survey-questions">12. How strongly would you rate yourself as physically affectionate?</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios12" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios12" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios12" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios12" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios12" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <label for="survey-questions">13. Are you comfortable discussing sexual preferences?</label>
-
-                <br>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios13" id="inlineRadio1" value="1">
-                    <label class="form-check-label" for="inlineRadio1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios13" id="inlineRadio2" value="2">
-                    <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios13" id="inlineRadio3" value="3"
-                        checked>
-                    <label class="form-check-label" for="inlineRadio3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios13" id="inlineRadio3" value="4">
-                    <label class="form-check-label" for="inlineRadio3">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadios13" id="inlineRadio3" value="5">
-                    <label class="form-check-label" for="inlineRadio3">5</label>
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Personal Message for your Cherub</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="message">Personal Message for your Cherub</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Type a personal message for your cherub here!"></textarea>
             </div>
         </form>
     </div>
@@ -463,7 +234,7 @@
             </div>
         </div>
     </div>
-
+    </div>
     <!-- JavaScript/jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -474,67 +245,61 @@ $("#submit-btn").on("click", function(event) {
     //prevents default submission function
     event.preventDefault();
 
-    // //holds scores from survey
-    // var scores = [];
-
-    // //grabs all checked values and pushes it into the scores array
-    // $("input:checked").each(function(i,e){
-    //     scores.push($(e).val());
-    // })
-
-    // //object that holds new user data grabbed from survey page
-    // var newCherub = {
-    //   "name": $("#username").val().trim(),
-    //   "picture": $("#profile-picture").val().trim(),
-    //   "scores": scores
-    // }
-
     // form validation
     function validateForm() {
-        var isValid = true;
-        var completeForms = $(".inputs > input:checked").length;
-        if (completeForms < 13) {
-            isValid = false;
-        } else {
-            isValid = true;
-        }
-        return isValid;
-    }
+                var isValid = true;
+                var completeForms = $(".inputs > input:checked").length;
+                if (completeForms < 10) {
+                    isValid = false;
+                } else {
+                    isValid = true;
+                }
+                return isValid;
+            }
+
 
             // if an answer is given for all questions
             if (validateForm()) {
                 var newCherub = {
                     name: $("#username").val().trim(),
-                    picture: $("#profile-picture").val().trim(),
-                    scores: [$("input[name='inlineRadios-1']:checked").val(),
-                            $("input[name='inlineRadios-2']:checked").val(),
-                            $("input[name='inlineRadios-3']:checked").val(),
-                            $("input[name='inlineRadios-4']:checked").val(),
-                            $("input[name='inlineRadios-5']:checked").val(),
-                            $("input[name='inlineRadios-6']:checked").val(),
-                            $("input[name='inlineRadios-7']:checked").val(),
-                            $("input[name='inlineRadios-8']:checked").val(),
-                            $("input[name='inlineRadios-9']:checked").val(),
-                            $("input[name='inlineRadios-10']:checked").val(),
-                            $("input[name='inlineRadios-11']:checked").val(),
-                            $("input[name='inlineRadios-12']:checked").val(),
-                            $("input[name='inlineRadios-13']:checked").val(),
-
+                    photo: $("#profile-picture").val().trim(),
+                    scores: [$("input[name='question-1']:checked").val(),
+                            $("input[name='question-2']:checked").val(),
+                            $("input[name='question-3']:checked").val(),
+                            $("input[name='question-4']:checked").val(),
+                            $("input[name='question-5']:checked").val(),
+                            $("input[name='question-6']:checked").val(),
+                            $("input[name='question-7']:checked").val(),
+                            $("input[name='question-8']:checked").val(),
+                            $("input[name='question-9']:checked").val(),
+                            $("input[name='question-10']:checked").val()
                     ]
                 };
-                console.log("form validated"
-                )
     
+            
+                //posts data grabbed 
+                $.post("/api/cherubs", newCherub, function(data){
+                    $("match-name").text("Your cherub is " + data.name);
+                    $("#match-img").attr("src", data.picture);
+                    $("personalMessage").text(data.message);
+
+                    console.log("Data posted and modal popped.")
+
+                    $("#results-modal").modal("toggle");
+                });
+            }
+            else {
+                alert("Please fill out all fields before submitting!");
             }
 
     // Get the modal
-    var modal = document.getElementById("myModal");
+    var modal = document.getElementById("results-modal");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0]; 
 
-    // When the user clicks on the button, open the modal 
-    modal.style.display = "block";
+    // // When the user clicks on the button, open the modal 
+    // modal.style.display = "block";
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
@@ -547,12 +312,6 @@ $("#submit-btn").on("click", function(event) {
         modal.style.display = "none";
     }
     }
-
-    //posts data grabbed 
-    $.post("/api/cherubs", newCherub, function(data){
-        $("match-name").text("Your cherub is " + data.name);
-        $("#match-img").attr("src", data.picture);
-    });
 });
 
     </script>
@@ -573,51 +332,98 @@ $("#submit-btn").on("click", function(event) {
             padding-top: 0px;
             padding-bottom: 0px;
         }
-        
-        #submit-btn{
+
+        #submit-btn {
             margin: 10px auto;
         }
 
         /* The Modal (background) */
         .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
         }
 
         /* Modal Content/Box */
         .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
         }
 
         /* The Close Button */
         .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
         }
 
         .close:hover,
         .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
 
-    </style>
+        .quiz {
+            margin: 20px;
+        }
 
+        .btn-info {
+            background-color: gray;
+            border-color: gray;
+        }
+
+        .question{
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    /* text-align: left; */
+    font-size: 1.25rem;
+}
+
+img#match-img {
+    width: 100%;
+}
+
+h2#match-name {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 0 1rem;
+}
+
+.modal-header, .modal-footer {
+    border: 0;
+}
+    </style>
 </body>
 
 </html>

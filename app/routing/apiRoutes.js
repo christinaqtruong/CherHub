@@ -1,46 +1,51 @@
+var cherubs = require("../data/cherubs");
+
 module.exports = function(app) {
-
-// Users (DATA)
-// =============================================================
-var cherubs = [];
-var path = require("path");
-
-// Create New Characters - takes in JSON input
-app.post("/api/cherubs", function(req, res) {
-    // holds the data from the request, and sets default values for the score and index we are comparing the first user data to
-    var newCherub = req.body;
-    let bestFriend = {
-      score: 1000000,
-      index: 0
-    };
-    
-  //loops through all the data submitted and compares their scores, setting a default difference of zero
-  for (let i = 0; i < cherubs.length; i++) {
-    const element = cherubs[i];
-    let diff = 0;
-
-      //calculates the differences between the newest user data and the previous ones using absolute values
-      for (let j = 0; j < req.body.scores.length; j++) {
-        diff = diff + Math.abs(parseInt(element.scores[j]) - parseInt(req.body.scores[j]))
-        
-      }
-
-      //if the difference is the lowest one, it grabs the user data with the lowest score
-      console.log(diff,bestFriend.score);
-      if(diff<bestFriend.score){
-        diff = bestFriend.score
-        bestFriend.index = i;
-      }
-  }
-    
-    //grabs the cherub with the lowest difference and sticks their data into the cherubs array
-    cherubs.push(newCherub);
-    res.json(cherubs[bestFriend.index]);
+  // Displays information on the cherub with the lowest difference
+  app.get("/api/cherubs", function(req, res) {
+    return res.json(evaluate);
   });
 
-// Displays information on the cherub with the lowest difference
-app.get("/api/cherubs", function(req, res) {
-  return res.json(cherubs);
-});  
+  // Create New Characters - takes in JSON input
+  app.post("/api/cherubs", function(req, res) {
+    var bestMatch = {};
 
-}
+    function evaluate(newCherub) {
+      bestMatch = {
+        name: "",
+        picture: "",
+        message: "",
+        difference: 100
+      };
+
+      for (let i = 0; i < cherubs.length; i++) {
+        var difference = 0;
+
+        for (let j = 0; j < newCherub.scores.length; j++) {
+          difference += Math.abs(newCherub.scores[j] - cherubs[i].scores[j]);
+
+          if (j === newCherub.scores.length - 1) {
+            if (bestMatch.difference > difference) {
+              bestMatch.difference = difference;
+              bestMatch.name = cherubs[i].name;
+              bestMatch.picture = cherubs[i].picture;
+              bestMatch.message = cherubs[i].message;
+            }
+          }
+        }
+      }
+      console.log("Best match: ", bestMatch);
+      return bestMatch;
+    }
+
+    var newCherub = req.body;
+
+    console.log("New cherub: ", newCherub);
+    evaluate(newCherub);
+
+    cherubs.push(newCherub);
+
+    res.json(bestMatch);
+
+  });
+};
